@@ -7,9 +7,9 @@ const CarCards = () => {
       {/* Container */}
       <div className="w-11/12 md:w-full max-w-6xl my-4 mx-auto">
         {/* grid */}
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-5 w-full justify-center items-center">
+        <div className="masonry md:masonry-sm w-full justify-center items-center">
           {data.map((item) => (
-            <div className="rounded border-2 border-green-600 mb-5 hover:scale-105 duration-500">
+            <div className="rounded border-2 border-green-900 mb-5 hover:scale-105 duration-500">
               <img
                 className="w-full object-cover object-center"
                 src={item.img[0]}

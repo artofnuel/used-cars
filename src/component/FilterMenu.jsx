@@ -6,7 +6,7 @@ const FilterMenu = () => {
       {/* Containter */}
       <div className="w-11/12 md:w-full max-w-6xl mx-auto">
         {/* Inputs */}
-        <div className="w-full my-3 p-4 border-2 border-green-600 rounded">
+        <div className="w-full my-3 p-4 border-2 border-green-900 rounded">
           <form
             action=""
             className="flex flex-wrap justify-between items-center"

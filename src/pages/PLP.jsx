@@ -5,7 +5,7 @@ import FilterMenu from "../component/FilterMenu";
 const PLP = () => {
   return (
     <div>
-      {/* <FilterMenu /> */}
+      <FilterMenu />
       <CarCards />
     </div>
   );
