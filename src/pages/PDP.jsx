@@ -2,18 +2,9 @@ import React from "react";
 import { useState } from "react";
 import car from "../asset/car.jpg";
 import { data } from "../component/Cardata";
+import Carousel from "../component/Carousel";
 
 const PDP = () => {
-  const imgs = data[0].img;
-
-  const [active, setActive] = useState(imgs[0]);
-
-  const handleActive = (index) => {
-    console.log(index);
-    const slider = imgs[index];
-    setActive(slider);
-  };
-
   return (
     <div className="w-full my-10">
       {/* container */}
@@ -22,26 +13,7 @@ const PDP = () => {
         <div className="flex flex-col gap-5 w-full">
           {/* For the Images */}
           <div className="flex flex-col gap-5 p-4 border-2 border-green-900 rounded">
-            {/* main img */}
-            <div>
-              <img
-                className="w-full h-[500px] object-cover object-center rounded-md"
-                src={active}
-                alt=""
-              />
-            </div>
-            {/* carousel */}
-            <div className="w-full relative flex items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">
-              {imgs.map((item, index) => (
-                <img
-                  key={index}
-                  onClick={() => handleActive(index)}
-                  className="w-[220px] inline-block p-1 cursor-pointer"
-                  src={item}
-                  alt="/"
-                />
-              ))}
-            </div>
+            <Carousel />
           </div>
           {/* descriptions */}
           <div className="flex flex-col gap-5 p-4 border-2 border-green-900 rounded ">
