@@ -10,7 +10,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<PLP />} />
-          <Route path="/pdp" element={<PDP />} />
+          <Route path="/pdp/:productId" element={<PDP />} />
         </Routes>
       </BrowserRouter>
     </>

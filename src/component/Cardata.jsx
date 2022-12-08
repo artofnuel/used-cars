@@ -18,7 +18,7 @@ export const data = [
     img: [car, car1, car2, car3, car4, car, car1],
     title: "Toyota Camry",
     description: "Buy and drive nothing to fix accident free.",
-    price: `1,200,000.00`,
+    price: `1,000,000.00`,
   },
   {
     id: 3,
