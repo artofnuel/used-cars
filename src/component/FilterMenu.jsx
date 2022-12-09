@@ -4,9 +4,9 @@ const FilterMenu = () => {
   return (
     <div>
       {/* Containter */}
-      <div className="w-11/12 md:w-full max-w-6xl mx-auto">
+      <div className="w-11/12 md:w-full max-w-6xl mx-auto sm:px-4">
         {/* Inputs */}
-        <div className="w-full my-3 p-4 border-2 border-green-900 rounded">
+        <div className="w-full my-3 p-2 border-4 border-green-900 rounded">
           <form
             action=""
             className="flex flex-wrap justify-between items-center"

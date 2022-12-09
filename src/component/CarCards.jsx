@@ -1,61 +1,47 @@
 import React from "react";
 import { data } from "./Cardata";
 import { BsWhatsapp } from "react-icons/bs";
-import { useEffect } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CarCards = () => {
-  // useEffect(() => {
-  //   axios.get(`/api/product/products_by_id?id=${productId}&type=single`);
-
-  //   return () => {
-  //     second;
-  //   };
-  // }, []);
-
   return (
     <div>
       {/* Container */}
-      <div className="w-11/12 md:w-full max-w-6xl my-4 mx-auto">
+      <div className="w-11/12 md:w-full max-w-6xl my-4 mx-auto sm:p-4">
         {/* grid */}
         <div className="grid w-full gap-5 justify-center items-center">
           {data.map((item, index) => (
             <div
               key={index}
-              className="w-full flex gap-3 rounded-xl border-4 border-green-900"
+              className="w-full h-[300px] flex gap-3 rounded-xl border-4 border-green-900"
             >
               {/* imgs */}
-              <div className="flex gap-2 w-2/4">
-                <a href={`/pdp/${item.id}`}>
+              <div className="w-2/4 flex gap-1">
+                <Link to={`/cars/${item.id}`}>
                   <img
-                    className="w-full aspect-square object-cover rounded-l-md"
+                    className="w-full h-full object-cover object-center rounded-l-md"
                     src={item.img[0]}
                     alt={item.title}
                   />
-                </a>
-                <a href={`/pdp/${item._id}`}>
+                </Link>
+                <Link className="hidden lg:block" to={`/cars/${item.id}`}>
                   <img
-                    className="hidden lg:block w-full aspect-square object-cover"
+                    className="w-full h-full object-cover object-center"
                     src={item.img[1]}
                     alt={item.title}
                   />
-                </a>
+                </Link>
               </div>
               {/* texts */}
               <div className="w-2/4 flex flex-col justify-between gap-2 p-2">
                 <div className="space-y-6">
                   <div className="flex flex-col md:flex-row justify-between gap-2">
-                    <p key={index} className="font-bold text-md md:text-lg">
-                      {item.title}
-                    </p>
-                    <p key={index} className="font-bold text-md md:text-lg">
-                      {item.price}
+                    <p className="font-bold text-md md:text-lg">{item.title}</p>
+                    <p className="font-bold text-md md:text-lg">
+                      N{item.price}
                     </p>
                   </div>
-                  <p
-                    key={index}
-                    className="text-md md:text-lg line-clamp-1 md:line-clamp-3"
-                  >
+                  <p className="text-md md:text-lg line-clamp-1 md:line-clamp-3">
                     {item.description}
                   </p>
                 </div>

@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import car from "../asset/car.jpg";
 import { data } from "../component/Cardata";
 import Carousel from "../component/Carousel";
 
@@ -16,21 +14,6 @@ const PDP = () => {
             <Carousel />
           </div>
           {/* descriptions */}
-          <div className="flex flex-col gap-5 p-4 border-2 border-green-900 rounded ">
-            <div className="flex justify-between">
-              <p className="font-bold text-xl">{data[0].title}</p>
-              <p className="font-bold text-xl text-left md:text-center">
-                Price: N{data[0].price}
-              </p>
-            </div>
-            <p className="pr-20">{data[0].description}</p>
-            <a
-              className="text-lg font-semibold p-3 bg-green-900 text-white text-center rounded-lg hover:bg-white hover:text-green-900 border-2 border-green-900"
-              href="tel:+23422352095"
-            >
-              Call Me
-            </a>
-          </div>
         </div>
         {/* right side */}
         <div className="flex flex-col gap-5 sm:w-full w-4/5 lg:w-2/5">
