@@ -22,7 +22,7 @@ const Navbar = () => {
             type="text"
           />
         </span>
-        <div className="flex flex-col md:flex-row md:gap-5">
+        <div className="invisible hidden md:block flex flex-col md:flex-row md:gap-5">
           <Link to="/pdp">
             <h2 className="text-lg font-bold cursor-pointe">Product Display</h2>
           </Link>
